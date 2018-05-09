@@ -3,7 +3,7 @@ var http = require('http');
 // 用于请求的选项
 var options = {
    host: 'localhost',
-   port: '8080',
+   port: '80',
    path: '/index.html'  
 };
  
