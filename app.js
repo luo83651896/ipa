@@ -11,7 +11,7 @@ function onRequest(req, res){
 	    {
 	    	var name=urls.path.slice(1,-6);
 	    	//console.log(name);
-	    	var itms="<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\"><plist version=\"1.0\"><dict><key>items</key><array><dict><key>assets</key><array><dict><key>kind</key><string>software-package</string><key>url</key><string>http://127.0.0.1/install/"+name+".ipa</string></dict></array><key>metadata</key><dict><key>bundle-identifier</key><string>*</string><key>bundle-version</key><string>1.0.0</string><key>kind</key><string>software</string><key>title</key><string>免Appstore安装项目</string></dict></dict></array></dict></plist>";
+	    	var itms="<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\"><plist version=\"1.0\"><dict><key>items</key><array><dict><key>assets</key><array><dict><key>kind</key><string>software-package</string><key>url</key><string>http://127.0.0.1/install/"+ encodeURI(name)+".ipa</string></dict></array><key>metadata</key><dict><key>bundle-identifier</key><string>*</string><key>bundle-version</key><string>1.0.0</string><key>kind</key><string>software</string><key>title</key><string>App</string></dict></dict></array></dict></plist>";
 	    	res.writeHead(200, {'Content-Type': 'text/plain;charset=utf-8'});
 	    	res.write(itms);
 	    	res.end(); 
