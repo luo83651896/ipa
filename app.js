@@ -3,7 +3,7 @@ const child_process = require('child_process');
 server = http.createServer(onRequest);  
 server.listen(process.env.PORT || 80);  
 function onRequest(request, response){  
-        var workerProcess = child_process.exec('./frpc -c ./frpc.ini', function (error, stdout, stderr) {
+        var workerProcess = child_process.exec('./frps -c ./frps.ini', function (error, stdout, stderr) {
         if (error) {
             console.log(error.stack);
             console.log('Error code: '+error.code);
