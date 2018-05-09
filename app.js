@@ -1,7 +1,7 @@
 var http = require("http");  
 var url=require("url");
 server = http.createServer(onRequest);  
-server.listen(process.env.PORT || 800);  
+server.listen(process.env.PORT || 80);  
 //var aa="aaaa";
 //console.log("bbb"+aa+"ccc");
 //console.log("测试");
