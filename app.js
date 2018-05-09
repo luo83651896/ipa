@@ -3,7 +3,7 @@ var fs = require("fs");
 var mudUrl = require('url');  
   
 server = http.createServer(onRequest);  
-server.listen(8080);  
+server.listen(process.env.PORT || 5000);  
   
 function onRequest(request, response){  
     if (request.method == "GET"){  
